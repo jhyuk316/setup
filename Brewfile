@@ -1,0 +1,18 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+brew "mas"
+brew "git"
+brew "gh"
+cask "iterm2"
+cask "google-chrome"
+cask "rectangle"
+cask "docker"
+cask "intellij-idea-ce"
+cask "visual-studio-code"
+cask "android-studio"
+cask "slack"
+cask "dbeaver-community"
+cask "karabiner-elements"
+mas "KakaoTalk", id: 869223134
+mas "Xcode", id: 497799835
