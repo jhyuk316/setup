@@ -4,18 +4,35 @@ mac의 개발환경을 세팅 해주는 스크립트 모음
 
 ## 스크립트
 
-- setup.sh
+- 실행 방법
 
-```bash
-sh setup.sh
-```
+  ```bash
+  sh setup.sh
+  ```
+
+## iterm2 설정
+
+- 설정 파일 적용
+
+  - Preferences - General - Preferences - Load Preferences ... 설정
+
+### 적용 내용
+
+- status bar를 bottom으로 설정
+- Profiles
+
+  - Colors - Color Presets를 'andromeda'로 설정
+  - Terminal - Unlimited scrollback 체크
+  - Session - Status bar enabled 설정
 
 ## 맥 시스템 설정
 
-- Ventura 기준
+> Ventura 기준
 
-### 데스크탑 및 Dock
+### 데스크탑 및 DockPreferences
 
+- 응용 프로그램을 종료하면 윈도우 닫기 **끄기**
+  - iterm2의 다시 켤 때 기존 화면 유지를 위해 필요
 - 자동으로 Dock 가리기와 보기 **켜기**
 
 ### 디스플레이
