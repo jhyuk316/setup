@@ -1,9 +1,8 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
+tap "homebrew/cask-fonts"
 brew "mas"
-brew "git"
-brew "gh"
 cask "iterm2"
 cask "google-chrome"
 cask "rectangle"
@@ -14,5 +13,7 @@ cask "android-studio"
 cask "slack"
 cask "dbeaver-community"
 cask "karabiner-elements"
+cask "postman"
+cask "font-d2coding"
 mas "KakaoTalk", id: 869223134
 mas "Xcode", id: 497799835

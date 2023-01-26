@@ -1,16 +1,20 @@
-#!/bin/zsh
+#! /bin/bash
 
-# brew
-echo "Install Brew"
-NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# read -r -s -p "pass:" pass
+# 5분간 sudo권한
+sudo -v
 
-# oh my zsh
-echo "Install oh my zsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# install brew
+if [ -x "$(command -v brew)" ]; then
+    echo brew exists
+    brew update
+else
+    echo Install Brew
+    NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# p10k
-echo "Install powerlevel10k"
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+    echo '# Set PATH, MANPATH, etc., for Homebrew.' >>/Users/"${USER}"/.zprofile
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >>/Users/"${USER}"/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 brew bundle -v
