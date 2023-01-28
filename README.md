@@ -54,3 +54,12 @@ mac의 개발환경을 세팅 해주는 스크립트 모음
 
 - 키 반복 속도 **빠르게**
 - 반복 지연 시간 **짧게**
+
+---
+
+## d2coding 글꼴 brew로 설치하기
+
+```bash
+brew tap homebrew/cask-fonts
+brew install —cask font-d2coding
+```
