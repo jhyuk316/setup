@@ -63,3 +63,9 @@ mac의 개발환경을 세팅 해주는 스크립트 모음
 brew tap homebrew/cask-fonts
 brew install —cask font-d2coding
 ```
+
+---
+
+### intellij 세팅
+
+- Insert selected suggestion by pressing space, dot, or other context-dependent keys
