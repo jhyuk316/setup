@@ -11,6 +11,16 @@ if [ ! -e ~/powerlevel10k ]; then
     echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 fi
 
+# apply karabiner config
+if [ ! -e ~/karabiner ]; then
+  cp karabiner.json ~/.config/karabiner
+fi
+
+# apply iterm2 profile
+if [ ! -e ~/iTerm2 ]; then
+  cp itermprofiles.json ~/Library/Application\ Support/iTerm2/DynamicProfiles/Profiles.json
+fi
+
 # install node
 # if ! [ -x "$(command -v nvm)" ]; then
 #     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
