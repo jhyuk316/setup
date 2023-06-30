@@ -9,6 +9,19 @@ sudo -v
 defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
+## set finder
+defaults write com.apple.finder "ShowPathbar" -bool "true"
+defaults write com.apple.finder "_FXSortFoldersFirst" -bool "false"
+defaults write com.apple.finder "FXPreferredViewStyle" -string "Nlsv"
+killall Finder
+
+## set dock
+defaults write com.apple.dock "autohide" -bool "true"
+defaults write com.apple.dock autohide-time-modifier -float 0.3
+defaults write com.apple.dock "tilesize" -int "64"
+defaults write com.apple.dock "largesize" -int "116"
+killall Dock
+
 # install brew
 if [ -x "$(command -v brew)" ]; then
     echo brew exists
