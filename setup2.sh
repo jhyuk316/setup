@@ -2,22 +2,22 @@
 
 # install oh my zsh
 if [ ! -e ~/.oh-my-zsh ]; then
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
 # install powerlevel10k
 if [ ! -e ~/powerlevel10k ]; then
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-    echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+  echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 fi
 
 # apply karabiner config
-if [ ! -e ~/karabiner ]; then
+if [ -e ~/karabiner ]; then
   cp karabiner.json ~/.config/karabiner
 fi
 
 # apply iterm2 profile
-if [ ! -e ~/iTerm2 ]; then
+if [ -e ~/iTerm2 ]; then
   cp itermprofiles.json ~/Library/Application\ Support/iTerm2/DynamicProfiles/Profiles.json
 fi
 

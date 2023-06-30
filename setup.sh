@@ -4,6 +4,11 @@
 # 5분간 sudo권한
 sudo -v
 
+# mac setting
+## set fastest key repeat speed
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
+
 # install brew
 if [ -x "$(command -v brew)" ]; then
     echo brew exists
